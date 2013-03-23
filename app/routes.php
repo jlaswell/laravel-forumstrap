@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('forum', function()
+{
+	return View::make('index');
+});
+Route::get('404', function()
+{
+	return View::make('404');
+});
