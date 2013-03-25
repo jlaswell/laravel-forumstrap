@@ -14,6 +14,9 @@ class CreateMentionsTable extends Migration {
 		Schema::create('mentions', function($table)
 		{
 			$table->increments('id');
+			$table->integer( 'post_id' );
+			$table->integer( 'user_id' );
+			$table->timestamps();
 		});
 	}
 

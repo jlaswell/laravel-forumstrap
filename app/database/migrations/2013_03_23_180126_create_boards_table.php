@@ -14,6 +14,9 @@ class CreateBoardsTable extends Migration {
 		Schema::create('boards', function($table)
 		{
 			$table->increments('id');
+			$table->string( 'title', 255 );
+			$table->string( 'description', 255 )->nullable();
+			$table->timestamps();
 		});
 	}
 

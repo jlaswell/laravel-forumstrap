@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTagsTable extends Migration {
+class CreateRelationalTables extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,12 +11,7 @@ class CreateTagsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tags', function($table)
-		{
-			$table->increments('id');
-			$table->string( 'title', 255 );
-			$table->timestamps();
-		});
+		/* Create the relational tables here. */
 	}
 
 	/**
@@ -26,7 +21,7 @@ class CreateTagsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tags');
+		//
 	}
 
 }

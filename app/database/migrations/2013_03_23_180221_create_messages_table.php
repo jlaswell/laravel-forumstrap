@@ -14,6 +14,11 @@ class CreateMessagesTable extends Migration {
 		Schema::create('messages', function($table)
 		{
 			$table->increments('id');
+			$table->integer( 'to_user_id' );
+			$table->integer( 'from_user_id' );
+			$table->string( 'subject', 255 );
+			$table->text( 'body' );
+			$table->timestamps();
 		});
 	}
 

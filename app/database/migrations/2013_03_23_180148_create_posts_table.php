@@ -14,6 +14,9 @@ class CreatePostsTable extends Migration {
 		Schema::create('posts', function($table)
 		{
 			$table->increments('id');
+			$table->text( 'body' );
+			$table->integer( 'topic_id');
+			$table->timestamps();
 		});
 	}
 

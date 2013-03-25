@@ -14,6 +14,8 @@ class CreateSubscriptionsTable extends Migration {
 		Schema::create('subscriptions', function($table)
 		{
 			$table->increments('id');
+			$table->integer( 'topic_id' );
+			$table->integer( 'user_id'  );
 		});
 	}
 

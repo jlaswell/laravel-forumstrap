@@ -14,6 +14,10 @@ class CreateAnnouncementsTable extends Migration {
 		Schema::create('announcements', function($table)
 		{
 			$table->increments('id');
+			$table->string( 'title',	255 );
+			/* Path to the annoucment stored in a file. */
+			$table->string( 'path',		255 );
+			$table->timestamps();
 		});
 	}
 

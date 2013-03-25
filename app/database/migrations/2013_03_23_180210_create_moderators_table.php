@@ -14,6 +14,9 @@ class CreateModeratorsTable extends Migration {
 		Schema::create('moderators', function($table)
 		{
 			$table->increments('id');
+			$table->integer( 'board_id' );
+			$table->integer( 'user_id' );
+			$table->timestamps();
 		});
 	}
 
